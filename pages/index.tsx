@@ -27,6 +27,13 @@ const homePage: NextPage = () => {
           data: json
         })
       })
+      .catch((err) => {
+        console.log(err)
+        setState({
+          ...state,
+          loading: false
+        })
+      })
   }
 
   return <div>

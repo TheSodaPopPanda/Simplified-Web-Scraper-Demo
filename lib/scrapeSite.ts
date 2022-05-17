@@ -1,6 +1,6 @@
-import chromium from 'chrome-aws-lambda'
 // import puppeteer from 'puppeteer'
 import { industryData } from '../data/industryTypeData.json'
+import fetch from 'node-fetch'
 
 interface IndustryDataObj {
   [key: string]: string[] | undefined
@@ -9,15 +9,23 @@ interface IndustryDataObj {
 export const scrapeData = async (url:string, existingData:any) => {
   const industryDataObj:IndustryDataObj = industryData
 
-  const browser = await chromium.puppeteer.launch()
-  const page = await browser.newPage()
-  await page.goto(url, {
-    waitUntil: 'networkidle2'
-  })
-    .catch((err:any) => { console.log(err) })
-  const body = await page.$eval('html', (e) => e.innerHTML.toLowerCase())
-  await browser.close()
+  //  #
+  //  #   Puppeteer version
+  //  #   slower but is able to wait for page load and catch content
+  //  #   and handler js (react,vue) powered page content
+  //   const browser = await puppeteer.launch()
+  //   const page = await browser.newPage()
+  //   await page.goto(url, {
+  //     waitUntil: 'networkidle2'
+  //   })
+  //     .catch((err) => { console.log(err) })
+  //   const body = await page.$eval('html', (e) => e.innerHTML.toLowerCase())
+  //   await browser.close()
 
+  let body = ''
+  await fetch(url)
+    .then(async response => await response.text())
+    .then(text => { body = text })
   // emails
   const emails = existingData.emails || []
   const foundEmails = body.match(/[a-z0-9-.]+@[a-z0-9]+\.[a-z]{1,7}/g) || []
@@ -41,7 +49,6 @@ export const scrapeData = async (url:string, existingData:any) => {
     const regexWordsJoined = industryDataObj[industryName]?.join('|')
     const regex = new RegExp(`(${regexWordsJoined})`, 'g')
     const occurrences = body.match(regex) || []
-    console.log(regex)
     industryGuessValues[industryName] = occurrences.length
   }
 
