@@ -36,7 +36,7 @@ export default function Document () {
         href="https://fonts.gstatic.com"
         crossOrigin='true'/>
       <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Spartan:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700"
         rel="stylesheet"
       />
     </Html>

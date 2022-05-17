@@ -6,6 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "chrome-aws-lambda": "^10.1.0",
+    "fs": "^0.0.1-security",
     "next": "latest",
     "puppeteer": "^14.1.0",
     "react": "^17.0.2",

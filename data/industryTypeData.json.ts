@@ -28,7 +28,7 @@ export const industryData = {
     'country club', 'golf', 'tennis', 'tennis courts', 'clubhouse', 'fitness', 'gym', 'fitness club', 'golf course', 'recreation', 'sports', 'aquatics', 'pool',
     'swimming pool', 'poolside', 'workout', 'training', 'event facilities', 'swimming', 'fitness facility', 'performance training',
     'relaxation', 'personal training', 'personal trainer', 'winter lift', 'skiing', 'snowboarding', 'ski', 'snowboard', 'Deep Tissue Massage',
-    'spa', 'spa packages', 'spa services', 'relax', 'relaxation', 'luxury spa', 'spa services', 'massage', 'pedicures '
+    'spa packages', 'spa services', 'relax', 'relaxation', 'luxury spa', 'spa services', 'massage', 'pedicures '
   ],
   Health: [
     'teeth', 'dental', 'teeth whitening', 'dentinal implants', 'dental fillings', 'dentist', 'dental emergencies', 'oral health',
@@ -36,7 +36,7 @@ export const industryData = {
     'rehab', 'injury', 'recovery', 'addiction', 'therapy', 'psychiatric', 'psychiatry'
   ],
   'Accommodation & Food Services': [
-    'menu', 'uber eats', 'ubereats', 'indoor dining', 'menu', 'locations', 'cocktails', 'desserts', 'craft beer', 'beer', 'beer', 'wine', 'wines', 'hours',
+    'dinner menu', 'view menu', 'uber eats', 'ubereats', 'indoor dining', 'our menu', 'locations', 'cocktails', 'desserts', 'craft beer', 'beer', 'beer', 'wine', 'wines', 'hours',
     'burger', 'pulled pork', 'beef', 'family owned restaurant', 'pizza', 'main menu', 'drinks menu', 'brunch menu', 'reservations', 'delivery', 'open house',
     'open hours', 'book a table', 'pasta', 'appetizers', 'family of restaurants', 'check in', 'check out', 'suites', 'extended stay',
     'hotel', 'food & drink', 'food and drink', 'guestrooms', 'events', 'events & meetings', 'events and meetings', 'staycation'
@@ -44,7 +44,7 @@ export const industryData = {
   'Professional & Technical Services': [
     // HR
     'recruitment solutions', 'executive search', 'staffing solutions', 'staffing', 'recruitment', 'specialized recruitment', 'talent acquisition', 'talent',
-    'hr firm', 'driving performance', 'legislative compliance', 'human resources', 'hr', 'hr team',
+    'hr firm', 'driving performance', 'legislative compliance', 'human resources', 'hr team',
     // engendering
     'small businesses', 'structural design', 'building engineering',
     'engineering', 'energy efficient buildings', 'design drawings', 'permit documents', 'engineering solutions', 'building assessment', 'project management',
