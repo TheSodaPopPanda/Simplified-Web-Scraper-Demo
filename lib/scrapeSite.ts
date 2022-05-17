@@ -1,5 +1,5 @@
-// import chromium from 'chrome-aws-lambda'
-import puppeteer from 'puppeteer'
+import chromium from 'chrome-aws-lambda'
+// import puppeteer from 'puppeteer'
 import { industryData } from '../data/industryTypeData.json'
 
 interface IndustryDataObj {
@@ -9,12 +9,12 @@ interface IndustryDataObj {
 export const scrapeData = async (url:string, existingData:any) => {
   const industryDataObj:IndustryDataObj = industryData
 
-  const browser = await puppeteer.launch()
+  const browser = await chromium.puppeteer.launch()
   const page = await browser.newPage()
   await page.goto(url, {
     waitUntil: 'networkidle2'
   })
-    .catch((err) => { console.log(err) })
+    .catch((err:any) => { console.log(err) })
   const body = await page.$eval('html', (e) => e.innerHTML.toLowerCase())
   await browser.close()
 
