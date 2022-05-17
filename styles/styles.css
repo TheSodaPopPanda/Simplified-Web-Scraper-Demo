@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Open Sans', 'ui-sans-serif', 'system-ui';
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.theme-dark{
+  --main-bg:  255, 255, 255;
+  --accent-bg: 55, 65, 81;
+  --accent: 20, 24, 29;
+  --accent-dark: 208, 122, 59;
+  --text-main: 35, 35, 35;
+  --text-accent: 178, 179, 179;
+  --text-alt: 255, 255, 255;
+  --red: 247, 74, 74;
+}
